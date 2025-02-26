@@ -1,0 +1,66 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "bda5aba3-0a60-4650-bef5-cb234040528d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#owner manraj singh\n",
+    "#week2 lab2 \n",
+    "# discount_calculator.py\n",
+    "\n",
+    "def calculate_discount_price(original_price, discount_percentage):\n",
+    "    \"\"\"Function to calculate discounted price.\"\"\"\n",
+    "    discount_amount = (discount_percentage / 100) * original_price\n",
+    "    final_price = original_price - discount_amount\n",
+    "    return final_price\n",
+    "\n",
+    "def main():\n",
+    "    print(\"Welcome to the Discount Calculator!\")\n",
+    "\n",
+    "    # Get user input for original price and discount percentage\n",
+    "    try:\n",
+    "        original_price = float(input(\"Enter the original price: $\"))\n",
+    "        discount_percentage = float(input(\"Enter the discount percentage: \"))\n",
+    "        \n",
+    "        # Check if the inputs are valid\n",
+    "        if original_price < 0 or discount_percentage < 0:\n",
+    "            print(\"Please enter positive values for both price and discount percentage.\")\n",
+    "            return\n",
+    "        \n",
+    "        # Calculate and display the final price\n",
+    "        final_price = calculate_discount_price(original_price, discount_percentage)\n",
+    "        print(f\"The final price after a {discount_percentage}% discount is: ${final_price:.2f}\")\n",
+    "        \n",
+    "    except ValueError:\n",
+    "        print(\"Invalid input. Please enter numeric values.\")\n",
+    "\n",
+    "if __name__ == \"__main__\":\n",
+    "    main()\n"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
