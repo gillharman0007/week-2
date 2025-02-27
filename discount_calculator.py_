@@ -1,3 +1,4 @@
+# is look like a good
 {
  "cells": [
   {
@@ -28,8 +29,8 @@
     "        # Check if the inputs are valid\n",
     "        if original_price < 0 or discount_percentage < 0:\n",
     "            print(\"Please enter positive values for both price and discount percentage.\")\n",
-    "            return\n",
-    "        \n",
+    "            return\n \n", ) 
+
     "        # Calculate and display the final price\n",
     "        final_price = calculate_discount_price(original_price, discount_percentage)\n",
     "        print(f\"The final price after a {discount_percentage}% discount is: ${final_price:.2f}\")\n",
